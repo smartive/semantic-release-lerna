@@ -1,0 +1,11 @@
+include:
+  - 'https://gitlab.com/smartive/open-source/gitlab-ci-templates/raw/master/templates.yml'
+
+stages:
+  - release
+
+create release:
+  extends: .create-release
+  stage: release
+  only:
+    - master
